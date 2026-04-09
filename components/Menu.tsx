@@ -116,15 +116,10 @@ export default function Menu() {
                                 </div>
                             )}
 
-                            <div className="relative w-full aspect-square bg-[#EAEAEA]">
-                                <Image
-                                    src={`https://placehold.co/400x400/EAEAEA/5F5E5A/webp?text=${encodeURIComponent(item.title)}`}
-                                    alt={item.title}
-                                    fill
-                                    className="object-cover"
-                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                                    unoptimized
-                                />
+                            <div className="relative w-full aspect-square bg-[#EAEAEA] flex items-center justify-center p-4">
+                                <span className="font-sans text-[16px] text-[#5F5E5A] text-center font-medium">
+                                    {item.title}
+                                </span>
                             </div>
 
                             <div className="p-5 flex flex-col flex-grow">

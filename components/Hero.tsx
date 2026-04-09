@@ -87,6 +87,7 @@ export default function Hero() {
                 <motion.div
                     className="relative w-full aspect-[4/5] flex justify-center md:justify-end mt-8 md:mt-0"
                     initial="hidden"
+                    whileInView="visible"
                     viewport={{ once: true, amount: 0.15 }}
                     variants={bowlImageVariant}
                 >
