@@ -92,13 +92,12 @@ export default function Hero() {
                 >
                     <div className="relative w-full max-w-[500px] h-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                         <Image
-                            src="https://placehold.co/800x1000/1A3B1C/C8E89A/webp?text=Hero+Bowl"
+                            src="/sproutifyyy-hero.jpg"
                             alt="Fresh Sproutifyyy protein bowl"
                             fill
                             className="object-cover"
                             priority
                             sizes="(max-width: 768px) 100vw, 50vw"
-                            unoptimized
                         />
                     </div>
                 </motion.div>

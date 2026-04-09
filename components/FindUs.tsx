@@ -72,7 +72,7 @@ export default function FindUs() {
                     <div className="h-[400px] md:h-[500px] w-full bg-cream/5 rounded-3xl overflow-hidden border border-lime/10 shadow-xl relative group">
                         <iframe
                             title="Sproutifyyy Location"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d15077.58578508678!2d73.2307!3d19.1342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be792e31f08bd6b%3A0xe5a14d5e1f0e4719!2sBadlapur%20East%2C%20Badlapur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1712200000000!5m2!1sen!2sin"
+                            src="https://maps.google.com/maps?q=Mohan%20Palms%20Road,%20Badlapur%20East,%20Maharashtra&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}

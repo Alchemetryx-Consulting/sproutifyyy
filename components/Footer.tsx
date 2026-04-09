@@ -52,7 +52,17 @@ export default function Footer() {
 
                 <div className="mt-16 pt-8 border-t border-lime/10 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-sm text-cream/40">
                     <p>© {new Date().getFullYear()} Sproutifyyy. All rights reserved.</p>
-                    <p>Made in Badlapur.</p>
+                    <p>
+                        Made with ❤️ by{" "}
+                        <a
+                            href="https://alchemetryx.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-lime hover:text-white transition-colors underline underline-offset-2"
+                        >
+                            Alchemetryx
+                        </a>
+                    </p>
                 </div>
             </div>
         </footer>
