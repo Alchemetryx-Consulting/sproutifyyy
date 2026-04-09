@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
+import { SproutifyyHero } from '@/components/ui/hero-section';
 import Menu from "@/components/Menu";
 import WhyUs from "@/components/WhyUs";
 import Proof from "@/components/Proof";
@@ -11,7 +11,15 @@ export default function Home() {
     <>
       <Navbar />
       <main className="flex min-h-screen flex-col bg-cream">
-        <Hero />
+        <SproutifyyHero
+          bowlImageUrl="/sproutifyyy-hero.jpg"
+          onMenuClick={() => {
+            const menuElement = document.getElementById('menu');
+            if (menuElement) {
+              menuElement.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+        />
         <Menu />
         <WhyUs />
         <Proof />
