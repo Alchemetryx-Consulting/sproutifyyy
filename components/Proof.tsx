@@ -112,42 +112,46 @@ export default function Proof() {
                         </a>
                     </div>
 
-                    <motion.div
-                        className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 lg:gap-6"
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.15 }}
-                    >
-                        {IG_POSTS.map((post) => (
-                            <motion.a
-                                key={post.id}
-                                href="https://www.instagram.com/_sproutifyyy/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                variants={itemVariants}
-                                className="relative aspect-square rounded-2xl overflow-hidden group border border-forest/5 shadow-sm"
-                            >
-                                <Image
-                                    src={post.url}
-                                    alt={`Sproutifyyy Instagram Post ${post.id}`}
-                                    fill
-                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                    unoptimized
-                                    sizes="(max-width: 768px) 50vw, 33vw"
-                                />
+                    <div className="overflow-hidden relative w-full py-4 mt-8">
+                        <div className="absolute left-0 top-0 bottom-0 w-8 md:w-20 bg-gradient-to-r from-cream to-transparent z-10 pointer-events-none"></div>
+                        <div className="absolute right-0 top-0 bottom-0 w-8 md:w-20 bg-gradient-to-l from-cream to-transparent z-10 pointer-events-none"></div>
 
-                                {/* Hover overlay with Instagram style icon */}
-                                <div className="absolute inset-0 bg-forest/0 group-hover:bg-forest/20 transition-colors duration-300 flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-8 h-8">
-                                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                                    </svg>
-                                </div>
-                            </motion.a>
-                        ))}
-                    </motion.div>
+                        <motion.div
+                            className="flex gap-4 md:gap-6 min-w-max"
+                            animate={{ x: ["0%", "-50%"] }}
+                            transition={{
+                                ease: "linear",
+                                duration: 25,
+                                repeat: Infinity,
+                            }}
+                        >
+                            {[...IG_POSTS, ...IG_POSTS].map((post, i) => (
+                                <a
+                                    key={i}
+                                    href="https://www.instagram.com/_sproutifyyy/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="relative aspect-square w-[45vw] md:w-[320px] lg:w-[480px] shrink-0 rounded-2xl md:rounded-3xl overflow-hidden group shadow-sm bg-[#EAEAEA]"
+                                >
+                                    <Image
+                                        src={post.url}
+                                        alt={`Sproutifyyy Instagram Post ${(i % 6) + 1}`}
+                                        fill
+                                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                        unoptimized
+                                        sizes="(max-width: 768px) 50vw, 33vw"
+                                    />
+                                    <div className="absolute inset-0 bg-forest/0 group-hover:bg-forest/20 transition-colors duration-300 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-8 md:w-12 h-8 md:h-12">
+                                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            ))}
+                        </motion.div>
+                    </div>
                 </div>
 
             </div>
