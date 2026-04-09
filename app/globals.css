@@ -1,26 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-forest: #1A3B1C;
+  --color-sprout: #639922;
+  --color-lime: #C8E89A;
+  --color-yolk: #F5E642;
+  --color-cream: #F9F6EF;
+  --color-body: #2C2C2A;
+  --color-muted: #5F5E5A;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-forest: var(--color-forest);
+  --color-sprout: var(--color-sprout);
+  --color-lime: var(--color-lime);
+  --color-yolk: var(--color-yolk);
+  --color-cream: var(--color-cream);
+  --color-body: var(--color-body);
+  --color-muted: var(--color-muted);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+  --font-logo: var(--font-logo);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-body);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
