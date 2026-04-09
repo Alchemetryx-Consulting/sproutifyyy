@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Urbanist, Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
+import { Urbanist, Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 
 const fontLogo = Urbanist({
@@ -9,7 +9,7 @@ const fontLogo = Urbanist({
   display: "swap",
 });
 
-const fontHeading = Plus_Jakarta_Sans({
+const fontHeading = Cormorant_Garamond({
   variable: "--font-heading",
   subsets: ["latin"],
   weight: ["500", "600"],

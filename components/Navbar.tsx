@@ -3,6 +3,7 @@
 import { motion, useScroll } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
     const { scrollY } = useScroll();
@@ -23,21 +24,30 @@ export default function Navbar() {
                 backdropFilter: isScrolled ? "blur(12px)" : "blur(0px)",
             }}
         >
-            <Link href="/" className="font-logo text-2xl font-light text-cream">
-                Sproutifyyy
+            <Link href="/" className="flex items-center">
+                <Image
+                    src="/logo/sproutifyyy logo.png"
+                    alt="Sproutifyyy Logo"
+                    width={150}
+                    height={40}
+                    className="object-contain"
+                    priority
+                />
             </Link>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
-                <Link href="#menu" className="text-cream hover:text-lime font-sans">Menu</Link>
-                <Link href="#why" className="text-cream hover:text-lime font-sans">Why Us</Link>
-                <Link href="#proof" className="text-cream hover:text-lime font-sans">Proof</Link>
-                <Link href="#find" className="text-cream hover:text-lime font-sans">Find Us</Link>
+                <Link href="#menu" className="text-cream hover:text-lime font-heading text-lg">Menu</Link>
+                <Link href="#why" className="text-cream hover:text-lime font-heading text-lg">Why Us</Link>
+                <Link href="#proof" className="text-cream hover:text-lime font-heading text-lg">Proof</Link>
+                <Link href="#find" className="text-cream hover:text-lime font-heading text-lg">Find Us</Link>
                 <a
-                    href="https://wa.me/919326809058?text=Hi%20Sproutifyyy%2C%20I%27d%20like%20to%20place%20an%20order.%20(Open%206%3A30-11am%20daily%2C%20evenings%20Sat-Sun%207-10pm)"
-                    className="bg-sprout hover:bg-[#52821A] text-white px-4 py-2 rounded-full font-sans transition-colors"
+                    href="https://wa.me/919326809058?text=Hi%2C%20I%20want%20to%20order"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-sprout hover:bg-[#52821A] text-white px-4 py-2 rounded-full font-heading font-medium transition-colors"
                 >
-                    WhatsApp Order
+                    Order via WhatsApp
                 </a>
             </div>
 
@@ -53,20 +63,27 @@ export default function Navbar() {
                 </svg>
             </button>
 
-            {/* Mobile Menu Dropdown */}
+            {/* Mobile Menu Content */}
             {isMobileOpen && (
-                <div className="absolute top-full left-0 right-0 bg-forest border-t border-[#2C5730] p-4 flex flex-col gap-4 md:hidden">
-                    <Link onClick={() => setIsMobileOpen(false)} href="#menu" className="text-cream text-lg font-sans">Menu</Link>
-                    <Link onClick={() => setIsMobileOpen(false)} href="#why" className="text-cream text-lg font-sans">Why Us</Link>
-                    <Link onClick={() => setIsMobileOpen(false)} href="#proof" className="text-cream text-lg font-sans">Proof</Link>
-                    <Link onClick={() => setIsMobileOpen(false)} href="#find" className="text-cream text-lg font-sans">Find Us</Link>
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="md:hidden absolute top-20 left-4 right-4 bg-forest/95 backdrop-blur-xl rounded-2xl p-6 flex flex-col gap-6 shadow-xl border border-lime/10"
+                >
+                    <Link onClick={() => setIsMobileOpen(false)} href="#menu" className="text-cream text-xl font-heading">Menu</Link>
+                    <Link onClick={() => setIsMobileOpen(false)} href="#why" className="text-cream text-xl font-heading">Why Us</Link>
+                    <Link onClick={() => setIsMobileOpen(false)} href="#proof" className="text-cream text-xl font-heading">Proof</Link>
+                    <Link onClick={() => setIsMobileOpen(false)} href="#find" className="text-cream text-xl font-heading">Find Us</Link>
                     <a
-                        href="https://wa.me/919326809058?text=Hi%20Sproutifyyy%2C%20I%27d%20like%20to%20place%20an%20order.%20(Open%206%3A30-11am%20daily%2C%20evenings%20Sat-Sun%207-10pm)"
-                        className="bg-sprout text-center text-white px-4 py-3 rounded-full font-sans transition-colors mt-2"
+                        onClick={() => setIsMobileOpen(false)}
+                        href="https://wa.me/919326809058?text=Hi%2C%20I%20want%20to%20order"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-sprout text-center text-white px-4 py-3 rounded-full font-heading font-medium transition-colors mt-2"
                     >
-                        WhatsApp Order
+                        Order via WhatsApp
                     </a>
-                </div>
+                </motion.div>
             )}
         </motion.nav>
     );

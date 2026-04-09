@@ -2,6 +2,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Menu from "@/components/Menu";
 import WhyUs from "@/components/WhyUs";
+import Proof from "@/components/Proof";
+import FindUs from "@/components/FindUs";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -11,7 +14,10 @@ export default function Home() {
         <Hero />
         <Menu />
         <WhyUs />
+        <Proof />
+        <FindUs />
       </main>
+      <Footer />
     </>
   );
 }

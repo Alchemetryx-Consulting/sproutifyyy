@@ -44,7 +44,7 @@ export default function Hero() {
                         Sproutifyyy Badlapur
                     </motion.div>
 
-                    <div className="font-logo text-5xl sm:text-7xl lg:text-8xl font-black leading-tight">
+                    <div className="font-heading text-5xl sm:text-7xl lg:text-8xl font-black leading-tight">
                         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }}>
                             {titleWords.map((word, i) => (
                                 <motion.span key={i} className="inline-block mr-4" variants={fadeInUp}>
