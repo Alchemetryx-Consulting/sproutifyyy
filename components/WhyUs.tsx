@@ -69,7 +69,7 @@ export default function WhyUs() {
                         <motion.div
                             key={pillar.id}
                             variants={itemVariants}
-                            className="bg-[#204522] border border-lime/20 rounded-2xl p-8 hover:border-lime/50 transition-colors shadow-lg"
+                            className="bg-[#204522] border border-lime/20 rounded-2xl p-8 hover:border-lime/50 transition-all duration-150 ease-out md:hover:-translate-y-1 md:hover:shadow-lg shadow-lg"
                         >
                             <h3 className="font-heading text-2xl font-bold text-lime mb-4">{pillar.title}</h3>
                             <p className="font-sans text-cream/90 leading-relaxed text-lg">

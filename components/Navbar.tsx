@@ -18,8 +18,8 @@ export default function Navbar() {
 
     return (
         <motion.nav
-            className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 transition-colors duration-200"
-            animate={{
+            className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 transition-all duration-200 ease-out ${isScrolled ? 'shadow-sm border-b border-lime/10' : ''}`}
+            style={{
                 backgroundColor: isScrolled ? "var(--color-forest)" : "transparent",
                 backdropFilter: isScrolled ? "blur(12px)" : "blur(0px)",
             }}
@@ -64,27 +64,29 @@ export default function Navbar() {
             </button>
 
             {/* Mobile Menu Content */}
-            {isMobileOpen && (
-                <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="md:hidden absolute top-20 left-4 right-4 bg-forest/95 backdrop-blur-xl rounded-2xl p-6 flex flex-col gap-6 shadow-xl border border-lime/10"
-                >
-                    <Link onClick={() => setIsMobileOpen(false)} href="#menu" className="text-cream text-xl font-heading">Menu</Link>
-                    <Link onClick={() => setIsMobileOpen(false)} href="#why" className="text-cream text-xl font-heading">Why Us</Link>
-                    <Link onClick={() => setIsMobileOpen(false)} href="#proof" className="text-cream text-xl font-heading">Proof</Link>
-                    <Link onClick={() => setIsMobileOpen(false)} href="#find" className="text-cream text-xl font-heading">Find Us</Link>
-                    <a
-                        onClick={() => setIsMobileOpen(false)}
-                        href="https://wa.me/919326809058?text=Hi%2C%20I%20want%20to%20order"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-sprout text-center text-white px-4 py-3 rounded-full font-heading font-medium transition-colors mt-2"
+            {
+                isMobileOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="md:hidden absolute top-20 left-4 right-4 bg-forest/95 backdrop-blur-xl rounded-2xl p-6 flex flex-col gap-6 shadow-xl border border-lime/10"
                     >
-                        Order via WhatsApp
-                    </a>
-                </motion.div>
-            )}
-        </motion.nav>
+                        <Link onClick={() => setIsMobileOpen(false)} href="#menu" className="text-cream text-xl font-heading">Menu</Link>
+                        <Link onClick={() => setIsMobileOpen(false)} href="#why" className="text-cream text-xl font-heading">Why Us</Link>
+                        <Link onClick={() => setIsMobileOpen(false)} href="#proof" className="text-cream text-xl font-heading">Proof</Link>
+                        <Link onClick={() => setIsMobileOpen(false)} href="#find" className="text-cream text-xl font-heading">Find Us</Link>
+                        <a
+                            onClick={() => setIsMobileOpen(false)}
+                            href="https://wa.me/919326809058?text=Hi%2C%20I%20want%20to%20order"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-sprout text-center text-white px-4 py-3 rounded-full font-heading font-medium transition-colors mt-2"
+                        >
+                            Order via WhatsApp
+                        </a>
+                    </motion.div>
+                )
+            }
+        </motion.nav >
     );
 }

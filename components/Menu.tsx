@@ -85,8 +85,8 @@ export default function Menu() {
                             key={category}
                             onClick={() => setActiveCategory(category)}
                             className={`px-6 py-3 rounded-full font-heading text-sm sm:text-base font-semibold transition-all ${activeCategory === category
-                                    ? "bg-forest text-cream shadow-md"
-                                    : "bg-white text-muted hover:bg-lime/20 border border-transparent shadow-sm"
+                                ? "bg-forest text-cream shadow-md"
+                                : "bg-white text-muted hover:bg-lime/20 border border-transparent shadow-sm"
                                 }`}
                         >
                             {category}
@@ -107,7 +107,7 @@ export default function Menu() {
                         <motion.div
                             key={item.id}
                             variants={itemVariants}
-                            className={`flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative ${item.isHero ? "ring-2 ring-yolk max-sm:-mx-2" : ""
+                            className={`flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm md:hover:-translate-y-1 md:hover:shadow-lg transition-all duration-150 ease-out relative ${item.isHero ? "ring-2 ring-yolk max-sm:-mx-2" : ""
                                 }`}
                         >
                             {item.isHero && (

@@ -15,7 +15,7 @@ const IG_POSTS = [
 
 function Counter() {
     const ref = useRef<HTMLSpanElement>(null);
-    const isInView = useInView(ref, { once: true, amount: 0.5 });
+    const isInView = useInView(ref, { once: true, amount: 0.15 });
     const countValue = useMotionValue(0);
     const rounded = useTransform(countValue, (latest) => (Math.round(latest * 10) / 10).toFixed(1));
 
@@ -42,17 +42,16 @@ export default function Proof() {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.04
+                staggerChildren: 0.03
             }
         }
     };
 
     const itemVariants: Variants = {
-        hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
+        hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            y: 0,
-            transition: { duration: 0.28, ease: "easeOut" }
+            transition: { duration: 0.2, ease: "easeOut" }
         }
     };
 

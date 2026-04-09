@@ -50,10 +50,11 @@ export default function FindUs() {
                                 href="https://wa.me/919326809058?text=Hi%2C%20I%20want%20to%20order"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                animate={{ scale: [1, 1.03, 1] }}
+                                initial={{ scale: 1 }}
+                                whileInView={{ scale: [1, 1.03, 1] }}
+                                viewport={{ once: true, amount: 0.15 }}
                                 transition={{
-                                    duration: 2,
-                                    repeat: Infinity,
+                                    duration: 0.6,
                                     ease: "easeInOut"
                                 }}
                                 className="inline-flex items-center justify-center gap-2 bg-sprout hover:bg-[#52821A] text-white px-8 py-4 rounded-full font-heading font-semibold transition-colors w-full sm:w-auto text-lg"
