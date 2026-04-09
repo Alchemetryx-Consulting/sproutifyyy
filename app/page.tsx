@@ -13,12 +13,6 @@ export default function Home() {
       <main className="flex min-h-screen flex-col bg-cream">
         <SproutifyyHero
           bowlImageUrl="/sproutifyyy-hero.jpg"
-          onMenuClick={() => {
-            const menuElement = document.getElementById('menu');
-            if (menuElement) {
-              menuElement.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
         />
         <Menu />
         <WhyUs />

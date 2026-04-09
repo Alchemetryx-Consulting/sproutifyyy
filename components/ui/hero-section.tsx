@@ -161,7 +161,13 @@ export const SproutifyyHero = ({
               >
                 {/* Primary CTA */}
                 <button
-                  onClick={onMenuClick}
+                  onClick={() => {
+                    if (onMenuClick) {
+                      onMenuClick();
+                    } else {
+                      document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
                   className="group inline-flex items-center justify-center gap-2 bg-[#639922] hover:bg-[#4e7a1a] active:scale-[0.97] text-white font-semibold text-[15px] px-7 py-3.5 rounded-full transition-all duration-200 w-full sm:w-auto cursor-pointer"
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                   aria-label="View our menu"
