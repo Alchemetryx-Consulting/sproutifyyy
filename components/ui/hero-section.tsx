@@ -108,10 +108,9 @@ export const SproutifyyHero = ({
                     {...motionProps(wordVariants, i)}
                     className={
                       i === 0
-                        ? 'font-urbanist font-light text-[clamp(52px,10vw,96px)] text-white tracking-tight'
-                        : 'font-urbanist font-light text-[clamp(52px,10vw,96px)] text-[#C8E89A] tracking-tight'
+                        ? 'font-logo font-light text-[clamp(52px,10vw,96px)] text-white tracking-tight'
+                        : 'font-logo font-light text-[clamp(52px,10vw,96px)] text-[#C8E89A] tracking-tight'
                     }
-                    style={{ fontFamily: "'Urbanist', sans-serif" }}
                   >
                     {word}
                   </motion.span>
@@ -121,8 +120,7 @@ export const SproutifyyHero = ({
               {/* Primary tagline */}
               <motion.p
                 {...motionProps(fadeUp(0.2))}
-                className="text-[clamp(16px,2.5vw,20px)] font-medium text-white/80 mb-1.5"
-                style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                className="text-[clamp(16px,2.5vw,20px)] font-medium text-white/80 font-sans mb-1.5"
               >
                 Eat Healthy. Stay Groovy.
               </motion.p>
@@ -130,8 +128,7 @@ export const SproutifyyHero = ({
               {/* Hindi line */}
               <motion.p
                 {...motionProps(fadeUp(0.35))}
-                className="text-[14px] text-white/45 italic mb-8"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
+                className="text-[14px] text-white/45 italic font-sans mb-8"
               >
                 Suno apna playlist. Khao apna protein.
               </motion.p>
@@ -168,8 +165,7 @@ export const SproutifyyHero = ({
                       document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
                     }
                   }}
-                  className="group inline-flex items-center justify-center gap-2 bg-[#639922] hover:bg-[#4e7a1a] active:scale-[0.97] text-white font-semibold text-[15px] px-7 py-3.5 rounded-full transition-all duration-200 w-full sm:w-auto cursor-pointer"
-                  style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                  className="group inline-flex items-center justify-center gap-2 bg-[#639922] hover:bg-[#4e7a1a] active:scale-[0.97] text-white font-semibold font-sans text-[15px] px-7 py-3.5 rounded-full transition-all duration-200 w-full sm:w-auto cursor-pointer"
                   aria-label="View our menu"
                 >
                   View Menu
@@ -182,8 +178,7 @@ export const SproutifyyHero = ({
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={onWhatsAppClick}
-                  className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-white/40 hover:bg-white/5 active:scale-[0.97] text-white font-medium text-[15px] px-7 py-3.5 rounded-full transition-all duration-200 w-full sm:w-auto"
-                  style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                  className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-white/40 hover:bg-white/5 active:scale-[0.97] text-white font-medium font-sans text-[15px] px-7 py-3.5 rounded-full transition-all duration-200 w-full sm:w-auto"
                   aria-label="Order on WhatsApp"
                 >
                   {/* WhatsApp icon inline SVG — no external dep */}
@@ -224,8 +219,8 @@ export const SproutifyyHero = ({
                 {/* ₹30 price tag — bounces in */}
                 <motion.div
                   {...motionProps(tagBounce)}
-                  className="absolute -bottom-4 -left-4 lg:-left-8 bg-[#F5E642] text-[#1A3B1C] font-bold text-[13px] px-4 py-2 rounded-full shadow-lg"
-                  style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", rotate: '-4deg' }}
+                  className="absolute -bottom-4 -left-4 lg:-left-8 bg-[#F5E642] text-[#1A3B1C] font-bold font-sans text-[13px] px-4 py-2 rounded-full shadow-lg"
+                  style={{ rotate: '-4deg' }}
                   aria-label="Starting from ₹30"
                 >
                   ₹30 onwards
@@ -234,8 +229,7 @@ export const SproutifyyHero = ({
                 {/* Protein badge — top right */}
                 <motion.div
                   {...motionProps(fadeUp(0.9))}
-                  className="absolute -top-3 -right-3 lg:-right-6 bg-[#1A3B1C] border border-[#639922]/40 text-[#C8E89A] text-[11px] font-semibold px-3 py-1.5 rounded-full shadow-lg"
-                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                  className="absolute -top-3 -right-3 lg:-right-6 bg-[#1A3B1C] border border-[#639922]/40 text-[#C8E89A] font-sans text-[11px] font-semibold px-3 py-1.5 rounded-full shadow-lg"
                 >
                   Up to ~35g protein
                 </motion.div>
@@ -254,8 +248,7 @@ export const SproutifyyHero = ({
       >
         <div className="flex flex-col items-center gap-1.5">
           <span
-            className="text-[10px] text-white/25 tracking-[2px] uppercase"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="text-[10px] text-white/25 tracking-[2px] font-sans uppercase"
           >
             Scroll
           </span>
