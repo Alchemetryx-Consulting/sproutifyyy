@@ -12,7 +12,8 @@ export default function Home() {
       <Navbar />
       <main className="flex min-h-screen flex-col bg-cream">
         <SproutifyyHero
-          bowlImageUrl="/images/sproutifyyy-hero.jpg"
+          bowlImageUrl="/images/hero-bowl.png"
+          bowlImageUrl2="/images/sproutifyyy-hero.jpg"
         />
         <Menu />
         <WhyUs />

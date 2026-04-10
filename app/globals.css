@@ -20,7 +20,9 @@
   --color-muted: var(--color-muted);
   --font-sans: var(--font-body);
   --font-heading: var(--font-heading);
-  --font-logo: var(--font-logo);
+  --font-urbanist: var(--font-urbanist);
+  --font-pjs: var(--font-pjs);
+  --font-dm: var(--font-dm);
 }
 
 body {

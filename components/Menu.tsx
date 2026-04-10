@@ -142,7 +142,7 @@ export default function Menu() {
                 <div className="flex justify-center">
                     <a
                         href="https://wa.me/919326809058?text=Hi%20Sproutifyyy%2C%20I%27d%20like%20to%20place%20an%20order.%20(Open%206%3A30-11am%20daily%2C%20evenings%20Sat-Sun%207-10pm)"
-                        className="bg-sprout hover:bg-[#52821A] text-white px-8 py-4 rounded-full font-sans font-medium transition-colors shadow-sm"
+                        className="bg-sprout hover:bg-[#52821A] text-white px-8 py-4 rounded-full font-heading font-semibold text-[16px] transition-colors shadow-sm"
                     >
                         Order via WhatsApp
                     </a>

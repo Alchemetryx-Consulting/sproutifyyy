@@ -45,7 +45,7 @@ export default function Navbar() {
                     href="https://wa.me/919326809058?text=Hi%2C%20I%20want%20to%20order"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-sprout hover:bg-[#52821A] text-white px-4 py-2 rounded-full font-heading font-medium transition-colors"
+                    className="bg-sprout hover:bg-[#52821A] text-white px-4 py-2 rounded-full font-heading font-semibold text-[16px] transition-colors"
                 >
                     Order via WhatsApp
                 </a>

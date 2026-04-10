@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Urbanist, Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Urbanist, Cormorant_Garamond, DM_Sans, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 const fontLogo = Urbanist({
-  variable: "--font-logo",
+  variable: "--font-urbanist",
   subsets: ["latin"],
   weight: ["300", "400"],
   display: "swap",
@@ -17,9 +17,17 @@ const fontHeading = Cormorant_Garamond({
 });
 
 const fontBody = DM_Sans({
-  variable: "--font-body",
+  variable: "--font-dm",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const fontPJS = Plus_Jakarta_Sans({
+  variable: "--font-pjs",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
